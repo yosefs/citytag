@@ -1,5 +1,5 @@
 class City < ActiveRecord::Base
-  attr_accessible :latitude, :longitude, :name
+  attr_accessible :name, :latitude, :longitude
   validates :name, :presence => true, :length => { :minimum => 2,:maximum => 30}
   validates :latitude, :presence => true
   validates :longitude, :presence => true
