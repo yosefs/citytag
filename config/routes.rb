@@ -1,4 +1,10 @@
 Citytag::Application.routes.draw do
+  root :to => 'search#index'
+  get '/search/:category/:value', :to => 'search#show'
+  get '/search', :to => 'search#index'
+  get '/city/:id', :to => 'city#viewcity'
+  match '/city', :to => 'city#createtag',:via => [:post]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

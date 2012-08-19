@@ -8,7 +8,6 @@
 City.create([
 {name: 'Colorado',latitude: 38.891033,longitude: -104.414062},
 {name: 'Manitoba',latitude: 56.12106,longitude: -97.998047},
-{name: 'colorado',latitude: 38.891033,longitude: -104.414062},
 {name: 'Jerusalem',latitude: 31.774878,longitude: 35.14801},
 {name: 'Ashdod',latitude: 31.798224,longitude: 34.642639},
 {name: 'Kiryat Gat',latitude: 31.604271,longitude: 34.763489},

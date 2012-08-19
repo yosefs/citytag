@@ -1,0 +1,15 @@
+<h1>City#viewcity</h1>
+<% if @tags.present? %>
+<div id="city-main">
+	<%= 'city name: '+@cityName %>
+tags: 
+<% @tags.each do |tag| %>
+	 <%= tag.name %>
+<% end %>
+</div>
+<% end %>
+<%= form_tag('/city',{:id =>'add-tag-form', :class =>"well form-inline",:remote => true}) do %>
+    <input name="cityname" type="hidden" value="<%= @cityName %>">
+    <input name="tagname" type="text" class="input-medium" placeholder="add tag" >
+    <button type="submit" class="btn"> add </button>
+<% end %>
