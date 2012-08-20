@@ -8,7 +8,7 @@ rake db:schema:load
 rake db:seed
 
 *Todo:*
-1. add RSpec
+1. add more RSpec tests
 2. create model with filter function to use it in models for user input data
 3. add more validation in models
 4. add google map city display
@@ -18,6 +18,7 @@ rake db:seed
 
 *Steps to create app(RSpec tests should be created first, not like i did):*
 
+
 plan application on paper
 
 create new app:rails new school
@@ -26,32 +27,32 @@ change Gemfile + include twitter bootstrap +remove coffescript from Gemfile
 
 bundle install
 
-*create models + migrations:*
+*create models + migrations:* 
 rails g model tag name:string
 rails g model city name:string, latitude:decimal, longitude:decimal
 rails g model tagcity teacher_id:integer course_id:integer
 
 *add code:*
-Models
-Migrations
-seeds
+ Models
+ Migrations
+ seeds
 
-*setup database:*
-rake db:migrate
-rake db:schema:load
-rake db:seed
-rake db:test:prepare //for rspec
+*Setup database:* 
+ rake db:migrate
+ rake db:schema:load
+ rake db:seed
+ rake db:test:prepare //for rspec
 
-*create course controller + actions + views:*
+*Create course controller + actions + views:* 
 rails g controller course show create
 
-setup routes
+setup routes in routes.rb
 
-add code to course controller + views
+add code to course controller + views 
 
-*include twitter bootstrap in rails:*
-https://github.com/thomas-mcdonald/bootstrap-sass/
-http://railsapps.github.com/twitter-bootstrap-rails.html
+*Include twitter bootstrap in rails:* 
+ https://github.com/thomas-mcdonald/bootstrap-sass/
+ http://railsapps.github.com/twitter-bootstrap-rails.html
 
 1. install gem : gem install bootstrap-sass -v '2.0.4.0'
 2. include in Gemfile:
@@ -66,5 +67,5 @@ http://railsapps.github.com/twitter-bootstrap-rails.html
   body { padding-top: 60px; } //for testing that it included
   @import "bootstrap-responsive";
 
-*Create search controller + views:*
-rails generate controller search index show
+*Create search controller + views:* 
+ rails generate controller search index show
