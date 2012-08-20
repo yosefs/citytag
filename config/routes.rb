@@ -1,4 +1,8 @@
 Citytag::Application.routes.draw do
+  get "search/index"
+
+  get "search/show"
+
   root :to => 'search#index'
   get '/search/:category/:value', :to => 'search#show'
   get '/search', :to => 'search#index'

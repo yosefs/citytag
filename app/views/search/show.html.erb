@@ -1,0 +1,12 @@
+<h1>Search#show</h1>
+<%= render :partial=>'search' %>
+<div id="search-results">
+  <% if @results.present? %>
+  <h2>results:</h2>
+	<% @results.each do |r| %>
+	   <div>city: <a href="/city/<%= r.name %>/"><%= r.name %></a></div>
+	<% end %>
+   <% else %>
+	   <h2>no results</h2>
+   <% end %>
+</div>

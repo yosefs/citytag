@@ -1,0 +1,19 @@
+<%= form_tag('/search',{:id =>'search-form', :class =>"well form-search",:method=>'get'}) do %>
+	<div>
+		<input type="radio" name="search1" value="city" 
+		<% if nil==@category || 'city'==@category %>
+		    checked
+		<% end %>
+		 />
+		city
+		<input type="radio" name="search1" value="tag" <% if 'tag'==@category %>
+		checked
+		<% end %>/>
+		tag
+	</div>
+	<input type="text" name="user-input" class="input-medium search-query" value="<%= @value %>" >
+	<button type="submit" class="btn">
+		Search
+	</button>
+<% end %>
+
