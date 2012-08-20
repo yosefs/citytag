@@ -1,7 +1,7 @@
 class CityController < ApplicationController
   def viewcity
     @cityName=params[:id];
-    @tags=Array(Tag.joins(tagcities: :city).where(cities: {name: @cityName}))
+    @tags=Array(@tags=Array(Tag.joins(tagcities: :city).where(cities: {name: @cityName})))
   end
 
   def createtag
