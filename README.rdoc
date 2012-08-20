@@ -1,13 +1,13 @@
-url on heroku of sample app
+*Url on heroku of sample app:*
 http://citytag.herokuapp.com/city/Manitoba/
 
-How run app:
+*How run app:*
 setup database.yml
 rake db:migrate
 rake db:schema:load
 rake db:seed
 
-Todo:
+*Todo:*
 1. add RSpec
 2. create model with filter function to use it in models for user input data
 3. add more validation in models
@@ -16,7 +16,7 @@ Todo:
 6. make design to pages
 7. add documentation
 
-Steps to create app(RSpec tests should be created first, not like i did):
+*Steps to create app(RSpec tests should be created first, not like i did):*
 
 plan application on paper
 
@@ -26,29 +26,30 @@ change Gemfile + include twitter bootstrap +remove coffescript from Gemfile
 
 bundle install
 
-create models + migrations:
+*create models + migrations:*
 rails g model tag name:string
 rails g model city name:string, latitude:decimal, longitude:decimal
 rails g model tagcity teacher_id:integer course_id:integer
 
-add code:
+*add code:*
 Models
 Migrations
 seeds
 
-setup database:
+*setup database:*
 rake db:migrate
 rake db:schema:load
 rake db:seed
+rake db:test:prepare //for rspec
 
-create course controller + actions + views:
+*create course controller + actions + views:*
 rails g controller course show create
 
 setup routes
 
 add code to course controller + views
 
-include twitter bootstrap in rails:
+*include twitter bootstrap in rails:*
 https://github.com/thomas-mcdonald/bootstrap-sass/
 http://railsapps.github.com/twitter-bootstrap-rails.html
 
@@ -65,6 +66,5 @@ http://railsapps.github.com/twitter-bootstrap-rails.html
   body { padding-top: 60px; } //for testing that it included
   @import "bootstrap-responsive";
 
-create search controller + views:
+*Create search controller + views:*
 rails generate controller search index show
-

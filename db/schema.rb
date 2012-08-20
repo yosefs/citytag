@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(:version => 20120819190044) do
 
   add_index "cities", ["name"], :name => "index_cities_on_name", :unique => true
 
+  create_table "courses", :force => true do |t|
+    t.string "name"
+  end
+
+  add_index "courses", ["name"], :name => "index_courses_on_name", :unique => true
+
   create_table "tagcities", :force => true do |t|
     t.integer "city_id"
     t.integer "tag_id"
@@ -33,5 +39,19 @@ ActiveRecord::Schema.define(:version => 20120819190044) do
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
+
+  create_table "teachercourses", :force => true do |t|
+    t.integer "teacher_id"
+    t.integer "course_id"
+  end
+
+  add_index "teachercourses", ["course_id"], :name => "index_teachercourses_on_course_id", :unique => true
+  add_index "teachercourses", ["teacher_id"], :name => "index_teachercourses_on_teacher_id", :unique => true
+
+  create_table "teachers", :force => true do |t|
+    t.string "name"
+  end
+
+  add_index "teachers", ["name"], :name => "index_teachers_on_name", :unique => true
 
 end
